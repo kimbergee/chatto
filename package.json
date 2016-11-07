@@ -1,10 +1,10 @@
 {
-  "name": "bloc-frontend-project-starter",
+  "name": "chatto",
   "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "description": "A real-time chat client using AngularJS and Firebase",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/kimbergee/chatto"
   },
   "main": "server.js",
   "scripts": {
