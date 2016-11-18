@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html ng-app="chatto">
-<head lang="en">
+  <head lang="en">
     <meta charset="UTF-8">
     <title>Chatto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/normalize.css">
-</head>
-<body>
-  <center>
-    <h1>Chatto</h1>
-    <h5>A fun and easy-to-use chat app.</h5>
-  </center>
 
-  <ui-view></ui-view>
+    <!-- Minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <center>
+      <h1>Chatto</h1>
+      <h5>A fun and easy-to-use chat app.</h5>
+    </center>
 
-  <!-- Angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <ui-view></ui-view>
 
-  <!-- UI-Router -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-  <!-- AngularFire -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.1.0/angularfire.min.js"></script>
+    <!-- UI-Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyD8jsyUw7VIdX9AhapagAQfrmF2dGdFzmQ",
-      authDomain: "chatto-b766e.firebaseapp.com",
-      databaseURL: "https://chatto-b766e.firebaseio.com",
-      storageBucket: "chatto-b766e.appspot.com",
-      messagingSenderId: "1022239750817"
-    };
-    firebase.initializeApp(config);
-  </script>
+    <!-- Angular UI Bootstrap & templates -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.5/ui-bootstrap-tpls.js"></script>
 
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/controllers/HomeCtrl.js"></script>
-  <script src="/scripts/services/Room.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
 
-</body>
+    <!-- AngularFire -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.1.0/angularfire.min.js"></script>
+
+    <script>
+    // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD8jsyUw7VIdX9AhapagAQfrmF2dGdFzmQ",
+        authDomain: "chatto-b766e.firebaseapp.com",
+        databaseURL: "https://chatto-b766e.firebaseio.com",
+        storageBucket: "chatto-b766e.appspot.com",
+        messagingSenderId: "1022239750817"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+
+  </body>
 </html>

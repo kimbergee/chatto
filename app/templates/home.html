@@ -1,4 +1,7 @@
 <h1>Available Chat Rooms</h1>
-<div  ng-repeat="room in home.rooms track by $index">
-  <p>{{ room }}</p>
+
+<button type="button" ng-click="home.open()">Create a New Room</button>
+
+<div ng-repeat="room in home.allRooms track by $index">
+  <p>{{ room.name }}</p>
 </div>
