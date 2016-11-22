@@ -1,9 +1,9 @@
 (function() {
-  function ModalCtrl($scope, Room, $uibModalInstance) {
+  function ModalCtrl($scope, RoomService, $uibModalInstance) {
 
     $scope.create = function() {
       console.log('YAY! created new room');
-      Room.addRoom($scope.newRoom);
+      RoomService.addRoom($scope.newRoom);
       $uibModalInstance.close();
     };
 
@@ -16,5 +16,5 @@
 
   angular
     .module('chatto')
-    .controller('ModalCtrl', ['$scope', 'Room', '$uibModalInstance', ModalCtrl]);
+    .controller('ModalCtrl', ['$scope', 'RoomService', '$uibModalInstance', ModalCtrl]);
 })();

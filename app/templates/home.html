@@ -1,7 +1,8 @@
-<h1>Available Chat Rooms</h1>
-
-<button type="button" ng-click="home.open()">Create a New Room</button>
-
-<div ng-repeat="room in home.allRooms track by $index">
-  <p>{{ room.name }}</p>
+<div class="home-page">
+  <div class="home-name">Chatto</div>
+  <h4>A fun and easy-to-use chat app.</h4>
+  <br><br>
+  <h6>Get started and see available</h6>
+  <br>
+  <a ui-sref="rooms" class="btn btn-info">chat rooms</a>
 </div>
