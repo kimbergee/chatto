@@ -29,6 +29,12 @@ body {
   text-align: center;
 }
 
+.errmsg {
+  text-align: center;
+  color: #d9534f;
+  font-weight: bold;
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;

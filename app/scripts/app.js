@@ -21,6 +21,6 @@
   }
 
   angular
-    .module('chatto', ['ui.router', 'firebase', 'ui.bootstrap'])
+    .module('chatto', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
     .config(config);
 })();

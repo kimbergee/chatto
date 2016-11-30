@@ -1,5 +1,5 @@
 (function() {
-  function RoomsCtrl(RoomService, MessageService, $uibModal) {
+  function RoomsCtrl($uibModal, RoomService, MessageService) {
 
     var ctrl = this;
     ctrl.allRooms = RoomService.all;
@@ -10,9 +10,9 @@
     ctrl.open = function() {
       var modalInstance = $uibModal.open({
         animation: true,
-        templateUrl: '/templates/modal.html',
-        controller: 'ModalCtrl',
-        controllerAs: 'modal',
+        templateUrl: '/templates/roommodal.html',
+        controller: 'RoomModalCtrl',
+        controllerAs: 'roommodal',
         size: 'sm'
       });
     };
@@ -27,5 +27,5 @@
 
   angular
     .module('chatto')
-    .controller('RoomsCtrl', ['RoomService', 'MessageService', '$uibModal', RoomsCtrl]);
+    .controller('RoomsCtrl', ['$uibModal', 'RoomService', 'MessageService', RoomsCtrl]);
 })();
