@@ -1,3 +1,4 @@
+/*
 (function() {
   function BlocChatCookies($cookies, $uibModal) {
     var currentUser = $cookies.get('blocChatCurrentUser');
@@ -18,3 +19,4 @@
     .module('chatto')
     .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();
+*/

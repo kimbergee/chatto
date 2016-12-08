@@ -1,11 +1,23 @@
 (function() {
-  function RoomsCtrl($uibModal, RoomService, MessageService) {
+  function RoomsCtrl($uibModal, RoomService, MessageService, $cookies) {
 
     var ctrl = this;
     ctrl.allRooms = RoomService.all;
-    // ctrl.getByRoomId = MessageService.getByRoomId;
-    // ctrl.currentRoom;
-    // ctrl.messages;
+
+    // open username modal before accessing rooms view
+    var initialize = function() {
+      var currentUser = $cookies.get('blocChatCurrentUser');
+      if (!currentUser || currentUser === '') {
+        $uibModal.open({
+          templateUrl: '/templates/usernamemodal.html',
+          controller: 'UsernameModalCtrl',
+          controllerAs: 'usernamemodal',
+          size: 'sm',
+          backdrop: 'static',
+          keyboard: false
+        });
+      };
+    }
 
     ctrl.open = function() {
       var modalInstance = $uibModal.open({
@@ -23,9 +35,10 @@
       ctrl.displayName = "(You are currently in the " + room.name + " room)";
     };
 
+    initialize();
   }
 
   angular
     .module('chatto')
-    .controller('RoomsCtrl', ['$uibModal', 'RoomService', 'MessageService', RoomsCtrl]);
+    .controller('RoomsCtrl', ['$uibModal', 'RoomService', 'MessageService', '$cookies', RoomsCtrl]);
 })();
