@@ -11,7 +11,7 @@
       $uibModalInstance.dismiss('cancel');
     };
 
-  };
+  }
 
   angular
     .module('chatto')

@@ -19,6 +19,18 @@ body {
   text-transform: uppercase;
 }
 
+.pick-room-name {
+  text-align: center;
+  font-size: 24px;
+  color: #df691a;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.pad-left {
+  padding-left: 40px;
+}
+
 .room-name {
   text-align: center;
   font-size: 18px;
@@ -78,6 +90,14 @@ body {
     margin-right: -250px;
 }
 
+.chat-bottom {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px !important;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
 .line {
   height: 65px;
   font-size: 24px;
@@ -90,14 +110,24 @@ body {
   bottom: 0;
   margin-left: 20px;
   margin-bottom: 20px !important;
+  padding-bottom: 40px !important;
 }
 
 
 /* Sidebar Styles */
 
+.btn:focus, .btn:active {
+   outline: none !important;
+}
+
 .room-links:hover {
   cursor: pointer;
   text-decoration: none;
+}
+
+.room-links:active {
+  text-decoration: none;
+  font-weight: 900;
 }
 
 .username {
