@@ -43,6 +43,7 @@
       console.log(newMsg);
       MessageService.send(newMsg);
       console.log('YAY! new msg sent');
+      newMsg.content = "";
     };
 
     initialize();

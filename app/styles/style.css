@@ -3,27 +3,30 @@ body {
   overflow-x: hidden;
 }
 
+.logo {
+  text-align: center;
+  width: 300px;
+  height: auto;
+  /*position: absolute;
+  top: 0;
+  right: 0;*/
+}
+
+.home-logo {
+  width: 400px;
+  height: auto;
+}
+
 .home-page {
+  padding-top: 100px;
   text-align: center;
-}
-
-.home-name {
-  padding-top: 50px;
-  font-size: 60px;
-  text-transform: uppercase;
-}
-
-.home-name-s {
-  text-align: center;
-  font-size: 40px;
-  text-transform: uppercase;
 }
 
 .pick-room-name {
   text-align: center;
   font-size: 24px;
   color: #df691a;
-  padding-top: 30px;
+  /*padding-top: 30px;*/
   padding-bottom: 30px;
 }
 
