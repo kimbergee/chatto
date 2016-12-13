@@ -3,52 +3,41 @@ body {
   overflow-x: hidden;
 }
 
-.logo {
+/* home page styles*/
+
+.home-content {
   text-align: center;
-  width: 300px;
-  height: auto;
-  /*position: absolute;
-  top: 0;
-  right: 0;*/
+  padding-top: 5em;
 }
 
-.home-logo {
-  width: 400px;
+img.home-logo {
+  width: 70%;
   height: auto;
 }
 
-.home-page {
-  padding-top: 100px;
-  text-align: center;
+#tagline {
+  font-size: 1.5em;
 }
 
-.pick-room-name {
-  text-align: center;
-  font-size: 24px;
-  color: #df691a;
-  /*padding-top: 30px;*/
-  padding-bottom: 30px;
+#started {
+  font-size: 1em;
 }
 
-.pad-left {
-  padding-left: 40px;
-}
+/* modals */
 
-.room-name {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 200;
-}
-
-.rooms-page {
-  text-align: center;
-}
-
-.errmsg {
+#errmsg {
   text-align: center;
   color: #d9534f;
   font-weight: bold;
 }
+
+.modal {
+    position: fixed;
+    top: 25% !important;
+    left: 50%;
+}
+
+/* rooms page styles*/
 
 #wrapper {
     padding-left: 0;
@@ -62,13 +51,71 @@ body {
     padding-left: 250px;
 }
 
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 1em;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* rooms main container */
+
+img.room-logo {
+  display: block;
+  margin: auto;
+  width: 20%;
+  height: auto;
+  padding-top: .5em;
+}
+
+#pick-room-name {
+  text-align: center;
+  font-size: 1.5em;
+  color: #df691a;
+}
+
+#display-room-name {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+#pad-left {
+  padding-left: 2em;
+}
+
+#username {
+  font-weight: bold;
+  color: #df691a;
+  float: left;
+}
+
+#message-cont {
+  float: left;
+  text-indent: 1em;
+}
+
+.chat-bottom {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2em !important;
+  padding-bottom: 2em;
+  padding-left: 2em;
+}
+
+/* sidebar styles */
+
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 16.5em;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -16.5em;
     overflow-y: auto;
     background: #ebebeb;
     color: #2b3e50;
@@ -82,112 +129,49 @@ body {
     width: 250px;
 }
 
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
+#sidebar-title {
+  height: 2em;
+  font-size: 2em;
+  line-height: 3em;
+  text-indent: .6em;
+  padding-bottom: 3em;
 }
 
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-.chat-bottom {
+#create-room-btn {
   position: fixed;
   bottom: 0;
-  margin-bottom: 20px !important;
-  padding-bottom: 40px;
-  padding-left: 40px;
+  margin-left: 1.5em;
+  margin-bottom: 1em !important;
+  padding-bottom: 1em !important;
 }
-
-.line {
-  height: 65px;
-  font-size: 24px;
-  line-height: 60px;
-  text-indent: 20px;
-}
-
-.marg {
-  position: fixed;
-  bottom: 0;
-  margin-left: 20px;
-  margin-bottom: 20px !important;
-  padding-bottom: 40px !important;
-}
-
-
-/* Sidebar Styles */
 
 .btn:focus, .btn:active {
    outline: none !important;
 }
 
-.room-links:hover {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.room-links:active {
-  text-decoration: none;
-  font-weight: 900;
-}
-
-.username {
-  font-weight: bold;
-  color: #df691a;
-  float: left;
-}
-
-.message-cont {
-  float: left;
-  padding-left: 10px;
-}
-
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 250px;
+  width:16.5em;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+    text-indent: 1.5em;
+    line-height: 3em;
 }
 
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
+a.room-links:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #999999;
 }
 
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
+a.room-links:active {
+  text-decoration: none;
+  font-weight: 900;
 }
 
 @media(min-width:768px) {

@@ -2,12 +2,14 @@
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
-      <div class="line">Available Rooms</div>
+      <div id="sidebar-title">Available Rooms</div>
       <div ng-repeat="room in rooms.allRooms track by $index">
-        <a class="room-links" href="#"><li class="sidebar-brand" ng-click="rooms.setCurrentRoom(room)">{{ room.name }}</li></a>
+        <a class="room-links" href="#">
+          <li ng-click="rooms.setCurrentRoom(room)">{{ room.name }}</li>
+        </a>
       </div>
       <br><br><br>
-      <div class="marg">
+      <div id="create-room-btn">
         <button type="button" class="btn btn-primary" ng-click="rooms.open()">Create</button>
       </div>
     </ul>
@@ -19,24 +21,24 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
-          <center><img class="logo" src="/assets/images/chatto-final1.png"></center>
+          <img class="room-logo" src="/assets/images/chatto-final1.png">
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <div class="room-name">{{ rooms.displayName }}</div>
+          <p id="display-room-name">{{ rooms.displayName }}</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <div class="pick-room-name">{{ rooms.displayPickName }}</div>
+          <p id="pick-room-name">{{ rooms.displayPickName }}</p>
         </div>
       </div>
       <br><br>
-      <div class="pad-left" ng-repeat="message in rooms.messages">
+      <div ng-repeat="message in rooms.messages" id="pad-left">
         <div class="row">
           <div class="col-lg-12">
-            <h5 class="username">{{ message.username }}:</h5> <h5 class="message-cont">{{ message.content }}</h5>
+            <h5 id="username">{{ message.username }}:</h5> <h5 id="message-cont">{{ message.content }}</h5>
           </div>
         </div>
       </div>
