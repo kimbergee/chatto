@@ -4,7 +4,7 @@
     <ul class="sidebar-nav">
       <div id="sidebar-title">Available Rooms</div>
       <div ng-repeat="room in rooms.allRooms track by $index">
-        <a class="room-links" href="#">
+        <a href="#">
           <li ng-click="rooms.setCurrentRoom(room)">{{ room.name }}</li>
         </a>
       </div>
@@ -21,12 +21,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
-          <img class="room-logo" src="/assets/images/chatto-final1.png">
+          <img src="/assets/images/chatto-final1.png">
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <p id="display-room-name">{{ rooms.displayName }}</p>
+          <h5>{{ rooms.displayName }}</h5>
         </div>
       </div>
       <div class="row">

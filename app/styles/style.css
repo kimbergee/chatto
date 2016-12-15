@@ -10,7 +10,7 @@ body {
   padding-top: 5em;
 }
 
-img.home-logo {
+.home-content img {
   width: 70%;
   height: auto;
 }
@@ -51,6 +51,8 @@ img.home-logo {
     padding-left: 250px;
 }
 
+/* rooms main container */
+
 #page-content-wrapper {
     width: 100%;
     position: absolute;
@@ -62,9 +64,7 @@ img.home-logo {
     margin-right: -250px;
 }
 
-/* rooms main container */
-
-img.room-logo {
+#page-content-wrapper img {
   display: block;
   margin: auto;
   width: 20%;
@@ -72,16 +72,15 @@ img.room-logo {
   padding-top: .5em;
 }
 
+#page-content-wrapper h5 {
+  text-align: center;
+  font-weight: 200;
+}
+
 #pick-room-name {
   text-align: center;
   font-size: 1.5em;
   color: #df691a;
-}
-
-#display-room-name {
-  text-align: center;
-  font-size: 1em;
-  font-weight: 200;
 }
 
 #pad-left {
@@ -158,21 +157,22 @@ img.room-logo {
   list-style: none;
 }
 
-.sidebar-nav li {
-    text-indent: 1.5em;
-    line-height: 3em;
-}
-
-a.room-links:hover {
+.sidebar-nav a:hover {
   cursor: pointer;
   text-decoration: none;
   color: #999999;
 }
 
-a.room-links:active {
+.sidebar-nav a:active {
   text-decoration: none;
   font-weight: 900;
 }
+
+.sidebar-nav li {
+    text-indent: 1.5em;
+    line-height: 3em;
+}
+
 
 @media(min-width:768px) {
     #wrapper {
